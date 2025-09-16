@@ -1,11 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Home } from './components/Home/Home'
 
 function App() {
   return (
-    <div className="App">
-      Home page of SCOUTEDGE
+    <div>
+      <BrowserRouter>
+         <Routes>
+           <Route path="/" element={<Home/>}/>
+         </Routes>
+      </BrowserRouter>
     </div>
   );
 }
